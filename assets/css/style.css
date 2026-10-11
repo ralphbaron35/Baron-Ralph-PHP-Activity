@@ -1,0 +1,69 @@
+/* Landing page styles (index.php).
+   NOTE: the original landing-page.html linked to style.css, which was not
+   included in the submitted zip, so these rules were recreated. */
+
+:root {
+  --slime-blue: #1e90ff;
+  --slime-cyan: #4cd7e8;
+}
+
+html, body { height: 100%; }
+
+.btn-primary {
+  --bs-btn-bg: var(--slime-blue);
+  --bs-btn-border-color: var(--slime-blue);
+  --bs-btn-hover-bg: #1670c9;
+  --bs-btn-hover-border-color: #1670c9;
+  --bs-btn-active-bg: #1260b0;
+  --bs-btn-active-border-color: #1260b0;
+}
+
+.bg-gradient-primary-to-secondary {
+  background: linear-gradient(45deg, var(--slime-blue), var(--slime-cyan));
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, var(--slime-blue), var(--slime-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Hero picture */
+.hero-photo-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.hero-blob {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 1 / 1;
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  background: linear-gradient(135deg, var(--slime-blue), var(--slime-cyan));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.profile-img {
+  height: 92%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.dot-pattern {
+  position: absolute;
+  z-index: 0;
+  width: 120px;
+  height: 120px;
+  background-image: radial-gradient(var(--slime-blue) 2px, transparent 2px);
+  background-size: 16px 16px;
+  opacity: 0.5;
+}
+
+.dot-pattern-left  { left: -40px;  bottom: -20px; }
+.dot-pattern-right { right: -40px; top: -20px; }
